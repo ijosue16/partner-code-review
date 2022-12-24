@@ -67,7 +67,7 @@ After you're finished please remove all the comments and instructions!
 
 ### Tech Stack <a name="tech-stack"></a>
 
->  In  this project a user enters a value using the input field to update his/her to do list. I have used an array of object to implement the basic structure of the program add and remove functionality.
+>  In  this project a user enters a value using the input field to update his/her to do list. I have used an array of object to implement the basic structure of the program add and remove functionality and a partner's review.
 
 <details>
   <summary>Client</summary>
