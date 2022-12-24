@@ -18,6 +18,10 @@ class TodolistClass {
     return todoobj;
   }
 
+  static reloading() {
+    window.location.reload();
+  }
+
   static displayTask(wee) {
     const taskElement = document.createElement('li');
     taskElement.classList.add(
@@ -95,7 +99,7 @@ class TodolistClass {
         }
         this.taskInfo[index].completed = false;
         localStorage.setItem('Todo', JSON.stringify(this.taskInfo));
-        window.location.reload();
+        TodolistClass.reloading();
       }
     });
   }
@@ -110,24 +114,24 @@ class TodolistClass {
         }
       });
       localStorage.setItem('Todo', JSON.stringify(this.taskInfo));
-      window.location.reload();
+      TodolistClass.reloading();
     });
-  };
+  }
 
-   // filter
+  // filter
 
-  remove(cl){
-    cl.addEventListener('click', (m) => {
-      this.taskInfo = this.taskInfo.filter((cls) => cls.completed !== true );
-      this.taskInfo.forEach((remain,index) => {
-        if(remain.index !== index){
+  remove(cl) {
+    cl.addEventListener('click', () => {
+      this.taskInfo = this.taskInfo.filter((cls) => cls.completed !== true);
+      this.taskInfo.forEach((remain, index) => {
+        if (remain.index !== index) {
           remain.index = index;
-        };
+        }
       });
       localStorage.setItem('Todo', JSON.stringify(this.taskInfo));
-      window.location.reload();
+      TodolistClass.reloading();
     });
-  };
+  }
 }
 
 const tododisplay = new TodolistClass();
@@ -142,7 +146,7 @@ function runfunction() {
       TodolistClass.displayTask(newaddedTask);
       input.value = '';
       e.preventDefault();
-      window.location.reload();
+      TodolistClass.reloading();
     }
   });
 
