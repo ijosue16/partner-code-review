@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-restricted-globals
 const taskHolder = document.querySelector(".task-holder");
 const input = document.querySelector(".addinput");
 const clearing = document.querySelector(".clearing");
